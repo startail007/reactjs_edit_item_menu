@@ -21,6 +21,12 @@ var Menu = React.createClass({
         }
         e.stopPropagation();
     },
+    onRemoveClick:function(index,e){
+        var newItems = this.state.items;
+        newItems.splice(index, 1);
+        this.setState({items: newItems});
+        e.stopPropagation();
+    },
     render: function() {
         var Nodes = null;
         var ButtonStyle = "Title "  + (this.state.open ? "active" : "");
@@ -30,9 +36,10 @@ var Menu = React.createClass({
                 return (
                     <div key={comment} className = "Item">
                         {comment}
+                        <div className = "Remove" onClick={this.onRemoveClick.bind(this,index)} title="移除">-</div>
                     </div>
                 );
-            });
+            }.bind(this));
         }
         var title = "點擊" + (this.state.open ? "關閉" : "展開");
         return (

@@ -22,7 +22,6 @@ body{
 }
 
 .animateExample .example-leave.example-leave-active {
-    margin-top: 20px;
     opacity: 0;    
 }
 .Menu{
@@ -34,7 +33,10 @@ body{
     min-width: 200px;
 }
 .Title > .Add{
-    display: inline-block;
+    position: absolute;
+    display: block;
+    top: calc(50% - 10px);
+    right: 5px;
     background-color: #333333;
     width: 20px;
     height: 20px;
@@ -51,6 +53,7 @@ body{
     color: #333333;
 }
 .Title{
+    position: relative;
     padding: 10px;
     text-align: center;
     background-color: #ebebeb;
@@ -70,6 +73,7 @@ body{
     color: #ebebeb;
 }
 .Item{
+    position: relative;
     padding: 10px;
     text-align: center;
     color: #ebebeb;
@@ -82,4 +86,22 @@ body{
 }
 .Item:hover{
     background-color: #797979;
+}
+.Item > .Remove{
+    position: absolute;
+    display: none;
+}
+.Item:hover > .Remove{    
+    display: block;
+    top: calc(50% - 10px);
+    right: 5px;
+    background-color: #6d1919;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 20px;
+    text-align: center;
+    color: #ffffff;
+    transition: all .5s .1s;
+    font-size: 16px;
 }
