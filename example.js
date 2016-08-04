@@ -11,10 +11,9 @@ var Menu = React.createClass({
     onAddClick:function(e){
         var data = prompt('輸入一些文字');
         if(data!=null){
-            if(data.length!=0){
+            if(data.length!=0){                
                 var newItems = this.state.items.concat([data]);
-                this.setState({items: newItems});
-                this.setState({open: true});
+                this.setState({items: newItems,open: true});
             }else{
                 alert('不能空白');
             }
@@ -22,6 +21,7 @@ var Menu = React.createClass({
         e.stopPropagation();
     },
     onRemoveClick:function(index,e){
+        console.log(e.target.parentElement);
         var newItems = this.state.items;
         newItems.splice(index, 1);
         this.setState({items: newItems});

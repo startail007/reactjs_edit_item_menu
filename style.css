@@ -22,6 +22,7 @@ body{
 }
 
 .animateExample .example-leave.example-leave-active {
+    max-height:  0px;
     opacity: 0;    
 }
 .Menu{
@@ -83,6 +84,7 @@ body{
     border-top-width: 1px;
     cursor:pointer;    
     transition: all .3s;
+    max-height:  100vh;
 }
 .Item:hover{
     background-color: #797979;
