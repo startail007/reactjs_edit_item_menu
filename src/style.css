@@ -1,0 +1,107 @@
+body{
+    margin: 0px;
+}
+
+.animateExample .example-enter,
+.animateExample .example-leave {
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+.animateExample .example-enter {
+    margin-top: 20px;
+    opacity: 0;    
+}
+
+.animateExample .example-enter.example-enter-active {
+    margin-top: 0px;
+    opacity: 1;
+}
+
+.animateExample .example-leave {
+    opacity: 1;
+}
+
+.animateExample .example-leave.example-leave-active {
+    opacity: 0;    
+}
+.Menu{
+    float: left;
+    background-color: #f79d25;
+    border-color: #9b9b9b;
+    border-style: solid;
+    border-width: 1px;
+    min-width: 200px;
+}
+.Title > .Add{
+    position: absolute;
+    display: block;
+    top: calc(50% - 10px);
+    right: 5px;
+    background-color: #333333;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 20px;
+    text-align: center;
+    color: #ffffff;
+    transition: all .5s .1s;
+    font-size: 16px;
+}
+
+.Title.active > .Add{
+    background-color: #ffffff;
+    color: #333333;
+}
+.Title{
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    background-color: #ebebeb;
+    cursor: pointer;    
+    transition: all .5s .1s;
+    color: #000000;
+    /*border-top-color: #9b9b9b;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-bottom-color: #9b9b9b;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;*/
+}
+.Title.active{
+    //font-size: 24px;
+    background-color: #000000;
+    color: #ebebeb;
+}
+.Item{
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    color: #ebebeb;
+    background-color: #3b3b3b;
+    border-top-color: #d6d6d6;
+    border-top-style: solid;
+    border-top-width: 1px;
+    cursor:pointer;    
+    transition: all .3s;
+}
+.Item:hover{
+    background-color: #797979;
+}
+.Item > .Remove{
+    position: absolute;
+    display: none;
+}
+.Item:hover > .Remove{    
+    display: block;
+    top: calc(50% - 10px);
+    right: 5px;
+    background-color: #6d1919;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 20px;
+    text-align: center;
+    color: #ffffff;
+    transition: all .5s .1s;
+    font-size: 16px;
+}
